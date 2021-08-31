@@ -19,5 +19,12 @@ def remove_punctuation(text):
     return punctuationfree
 
 
+def tokenize_text(text):
+    """ 
+    text: input text for which I need to tokenize
+    output: returns a list of tokens
+    """
+
+    return text.split()
     
     
