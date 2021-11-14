@@ -8,6 +8,7 @@ import pandas
 
 import string
 
+import spacy
 
 def remove_punctuation(text):
     """
@@ -28,6 +29,11 @@ def tokenize_text(text):
     
     """
     return text.split()
+
+def MyNer(text):
+    nlp = spacy.load('en_core_web_sm')
+    doc = nlp(text)
+    return [(ent.text, ent.label_) for ent in doc.ents]
 
 def something():
     return 2
